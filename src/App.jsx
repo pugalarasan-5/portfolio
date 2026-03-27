@@ -17,6 +17,7 @@ function App() {
         <Route path="/climate" element={<Climate />} />
         <Route path="/qr" element={<QrCode />} />
         <Route path="/converter" element={<Converter />} />
+         <Route path="*" element={<Home />} /> 
       </Routes>
     </HashRouter>
   );

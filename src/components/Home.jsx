@@ -37,7 +37,14 @@ function Home() {
         <p className="anim-text">
           I am a <span className="typed-text">{displayed}</span>
         </p>
-        <a href="#projects" className="btn">View My Work</a>
+        <button
+  className="btn"
+  onClick={() => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  }}
+>
+  View My Work
+</button>
       </div>
     </section>
   );

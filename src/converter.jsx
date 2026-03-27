@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import './converter.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
+  const native = useNavigate();
   const [value, setValue] = useState(1);
   const [fromCurrency, setFromCurrency] = useState('INR');
   const [toCurrency, setToCurrency] = useState('USD');
@@ -63,6 +65,7 @@ function App() {
           <div className="result">
             <p>{value} {fromCurrency} is equal to {result} {toCurrency}</p>
           </div>
+          <button onClick={() => native("*")}>back</button>
         </div>
       </div>
     </div>

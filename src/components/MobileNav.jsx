@@ -1,13 +1,45 @@
-import React from 'react';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHouse,
+  faUser,
+  faListCheck,
+  faAddressBook,
+} from "@fortawesome/free-solid-svg-icons";
 
 function MobileNav() {
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer className="bottom-nav">
       <ul>
-        <li><a href="#home"><i className="fa-solid fa-house"></i></a></li>
-        <li><a href="#about"><i className="fa-solid fa-italic"></i></a></li>
-        <li><a href="#projects"><i className="fa-solid fa-list-check"></i></a></li>
-        <li><a href="#contact"><i className="fa-solid fa-address-book"></i></a></li>
+        <li>
+          <button onClick={() => scrollToSection("home")}>
+            <FontAwesomeIcon icon={faHouse} />
+          </button>
+        </li>
+
+        <li>
+          <button onClick={() => scrollToSection("about")}>
+            <FontAwesomeIcon icon={faUser} />
+          </button>
+        </li>
+
+        <li>
+          <button onClick={() => scrollToSection("projects")}>
+            <FontAwesomeIcon icon={faListCheck} />
+          </button>
+        </li>
+
+        <li>
+          <button onClick={() => scrollToSection("contact")}>
+            <FontAwesomeIcon icon={faAddressBook} />
+          </button>
+        </li>
       </ul>
     </footer>
   );

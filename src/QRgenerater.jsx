@@ -1,6 +1,8 @@
 import { useState } from "react";
 import './qr.css'
+import { useNavigate } from "react-router-dom";
 export const QrCode = () => {
+  const native=useNavigate()
   const [img, setImg] = useState("");
   const [loading, setLoading] = useState(false);
   const [qrdata, setQrdata] = useState("https://www.google.com");
@@ -133,6 +135,7 @@ export const QrCode = () => {
           </button>
         </div>
       </form>
+      <button onClick={() => native("*")}>back</button>
 
       <footer>
         <p>

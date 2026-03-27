@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -7,26 +7,38 @@ export default function Header() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
+    <header className={`header ${scrolled ? "scrolled" : ""}`}>
       <h1>
-         <span>P</span>ugal <span>A</span>rasan
+        <span>P</span>ugal <span>A</span>rasan
       </h1>
 
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button onClick={() => scrollToSection("home")}>Home</button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection("about")}>About</button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection("projects")}>Projects</button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection("contact")}>Contact</button>
+          </li>
         </ul>
       </nav>
-
-      {/* You can add mobile bottom nav here or in separate component */}
     </header>
   );
 }
