@@ -1,0 +1,150 @@
+/* General Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+
+.app {
+margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container */
+.container-climate {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Search Bar */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  flex: 1;
+  padding: 5px;
+}
+
+.search img {
+  width: 25px;
+  cursor: pointer;
+}
+
+/* Weather Section */
+.weather img {
+  width: 100px;
+  margin: 10px 0;
+}
+
+.temp {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.city, .country {
+  
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+.city{
+  font-weight: 500;
+  font-size: 20px;
+  color: #3498db;
+
+
+}
+
+.location {
+  display: flex;
+  justify-content: space-evenly;
+  
+  margin: 15px 0;
+}
+
+
+.location div {
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+}
+.location div span{
+  font-size: 12px;
+  
+  
+}
+
+/* Live Data */
+.live {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.live div {
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.live div img{
+  width: 90px;
+  margin-right: 10px;
+
+}
+/* Loading & Error Messages */
+.loading, .error {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: red;
+}
+p{
+  font-size: 12px;
+  color: #3498db;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+
+}
+p span{
+  color: #2980b9;
+}
+p span:hover{
+  color: #3498db;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+  }
+}
