@@ -27,7 +27,7 @@
 }
 .des{
   width: 400px;
-  background-image: url(gymboy.jpg);
+  background-image: url(/image/gymboy.jpg);
   background-size: cover;
   height: 100%;
   border-radius: 10px 0 0 10px;
