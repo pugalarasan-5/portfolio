@@ -39,6 +39,8 @@
   font-size: 24px;
   margin-left: 20px;
   align-self: center;
+  color: #fff;
+  
   
 }
 .header h1 span {
@@ -51,6 +53,9 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+
 }
 nav ul li { display: inline; }
 nav ul li a {
@@ -68,7 +73,7 @@ nav button {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-nav ul li a:hover {
+nav ul li button:hover {
   background-color: #cac5e65d;
   border-radius: 50px;
 }
@@ -103,6 +108,7 @@ nav ul li a:hover {
 }
 .anim-text {
   font-size: 1.5rem;
+  color: #f4f4f4;
   margin-bottom: 20px;
   animation: slideUp 2s ease-in-out;
 }
@@ -139,7 +145,7 @@ nav ul li a:hover {
 .section-about {
   padding: 50px;
   text-align: center;
-  background-image: url('/image/leaves2.jpg');
+  background-image: url('/images/leaves2.jpg');
   background-size: 100%;
 }
 .section-about h2 { color: white; }
@@ -153,12 +159,12 @@ nav ul li a:hover {
 .section-projects {
   padding: 50px;
   text-align: center;
-  background-color: #b8cd67b0;
+  background-color: rgb(4, 172, 170);
   border-top: 2px white solid;
   border-bottom: 2px white solid;
 }
 .section-projects h2 {
-  text-shadow: 0px 0px 5px rgb(186,215,18);
+  text-shadow: 0px 0px 5px rgb(26, 153, 232);
   color: black;
   margin-bottom: 30px;
 }
@@ -419,7 +425,14 @@ nav ul li a:hover {
   border-radius: 50px;
   transform: scale(1.2); /* 🔥 nice hover effect */
 }
-  .resume-btn { width: 30px; font-size: 15px; }
+.header h1{
+  width: 150px;
+}
+.social div{
+  display: flex;
+  justify-content: space-evenly;
+}
+  .resume-btn {  font-size: 15px; }
   .link2 { font-size: 10px; margin: 5px; }
   .anim-title { font-size: 25px; }
   .header h1 { font-size: 15px; margin-left: 0; }

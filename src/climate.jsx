@@ -106,7 +106,7 @@ function App() {
       {loading && <div className="loading">Loading...</div>}
       {cityNotFound && <div className="error">City not found</div>}
       {error && <div className="error">Error fetching data</div>}
-      <button onClick={() => navigate('/')}>Back</button>
+      <button onClick={() => navigate('/')} className='weather-back'>Back</button>
       <p>Design by <span>Pugal Arasan</span></p>
     </div>
     </div>

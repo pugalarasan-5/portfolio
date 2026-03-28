@@ -68,7 +68,7 @@ function App() {
           <div className="btn">
             <button onClick={calculate}>Calculate</button>
             <button onClick={clear}>Clear</button>
-            <button onClick={()=>native("*")}>back</button>
+            <button onClick={()=>native("*")} className="Weigth-back">back</button>
           </div>
           {
           !error && bmi && <div className="result">

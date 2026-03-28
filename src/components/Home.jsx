@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const STRINGS = ['Frontend Developer', 'YouTuber', 'Web Developer'];
+const STRINGS = ['Backend Developer', 'Software Engineer', 'Web Developer'];
 const TYPE_SPEED = 100;
 const BACK_SPEED = 100;
 const BACK_DELAY = 1000;

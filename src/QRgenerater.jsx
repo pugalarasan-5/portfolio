@@ -135,7 +135,7 @@ export const QrCode = () => {
           </button>
         </div>
       </form>
-      <button onClick={() => native("*")}>back</button>
+      <button onClick={() => native("*")} className="Qr-Back">back</button>
 
       <footer>
         <p>
