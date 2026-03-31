@@ -9,7 +9,7 @@ function ResumeModal({ onClose }) {
       >
         <button className="close-btn" onClick={onClose}>&times;</button>
         <img
-          src="src\assets\Resume.pdf"
+          src="src\assets\Resume.jpg"
           alt="Resume preview"
           className="resume-image"
         />

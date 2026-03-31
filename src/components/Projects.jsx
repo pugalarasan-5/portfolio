@@ -3,6 +3,14 @@ import { useNavigate } from "react-router-dom";
 
 
 const PROJECTS = [
+  
+ {
+  title: "Digital Payment Management System",
+  desc: "Developed a full-stack digital payment system using Spring Boot and React.js with secure REST APIs for user authentication and transaction processing. Integrated MySQL with JPA/Hibernate and optimized database performance using HikariCP.",
+  tech: "Java · Spring Boot · Hibernate · JPA · MySQL · REST API · Maven · React JS",
+  live: "https://spring-git-development-fame1.vercel.app/"
+   }
+  ,
   {
     title: 'Weight Calculator',
     desc: 'A simple weight calculator application built with React, demonstrating skills in state management and user interface design.',
@@ -45,11 +53,17 @@ function ProjectCard({ project, index }) {
 
   return (
     <div
-      ref={ref}
-      onClick={() => navigate(project.path)} 
-      className={`project-card ${visible ? 'visible' : ''}`}
-      style={{ animationDelay: `${index * 0.3}s` }}
-    >
+  ref={ref}
+  onClick={() => {
+    if (project.live) {
+      window.open(project.live, "_blank");
+    } else {
+      navigate(project.path);
+    }
+  }}
+  className={`project-card ${visible ? 'visible' : ''}`}
+  style={{ animationDelay: `${index * 0.3}s` }}
+  >
       <h3>{project.title}</h3>
       <p>{project.desc}</p>
       <p style={{ marginTop: '10px', fontSize: '0.85rem', fontWeight: 600, opacity: 0.8 }}>
