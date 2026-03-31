@@ -9,14 +9,14 @@ function ResumeModal({ onClose }) {
       >
         <button className="close-btn" onClick={onClose}>&times;</button>
         <img
-          src="src\assets\Resume.jpg"
+          src="/images/Resume.jpg"
           alt="Resume preview"
           className="resume-image"
         />
         <h2>Resume</h2>
         <button className="cancel-btn" onClick={onClose}>Cancel</button>
         <a
-          href="src\assets\Resume.pdf"
+          href="/images/Resume.pdf"
           download
           className="download-btn"
         >
